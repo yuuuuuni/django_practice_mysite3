@@ -56,7 +56,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,8 +79,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mysite3', # DB명
-        'USER': 'root', # DBMS 접속 아이디 (SQLyog의 사용자이름이랑 일치, 기본값 : root)
-        'PASSWORD': '', # # DBMS 접속 비번 (SQLyog의 비밀번호랑 일치, 기본값 : '')
+        'USER': 'sbsst', # DBMS 접속 아이디 (SQLyog의 사용자이름이랑 일치, 기본값 : root)
+        'PASSWORD': 'sbs123414', # # DBMS 접속 비번 (SQLyog의 비밀번호랑 일치, 기본값 : '')
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {
