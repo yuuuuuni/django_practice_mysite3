@@ -79,8 +79,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mysite3', # DB명
-        'USER': 'sbsst', # DBMS 접속 아이디 (SQLyog의 사용자이름이랑 일치, 기본값 : root)
-        'PASSWORD': 'sbs123414', # # DBMS 접속 비번 (SQLyog의 비밀번호랑 일치, 기본값 : '')
+        'USER': 'root', # DBMS 접속 아이디 (SQLyog의 사용자이름이랑 일치, 기본값 : root)
+        'PASSWORD': '', # # DBMS 접속 비번 (SQLyog의 비밀번호랑 일치, 기본값 : '')
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {
@@ -127,6 +127,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
