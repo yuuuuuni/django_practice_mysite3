@@ -38,6 +38,7 @@ def answer_create(request, question_id):
         if form.is_valid():
             answer = form.save(commit=False)
             answer.create_date = timezone.now()
+            answer.question = question
             answer.save()
             return redirect('pybo:detail', question_id=question.id)
     else:
